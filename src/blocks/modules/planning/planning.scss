@@ -1,0 +1,240 @@
+.planning {
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 0 5px;
+    color: $base-color-font;
+
+    &__title {
+        margin-top: 2rem;
+        padding-left: 5px;
+        font-size: 3rem;
+        font-weight: 300;
+        color: $base-color-font;
+
+        @include respond(tab-v) {
+            font-size: 5rem;
+        }
+    }
+
+    &__development {
+        position: relative;
+        margin-top: 1rem;
+        min-height: 60rem;
+
+        &-title {
+            display: inline-block;
+            position: absolute;
+            top: -4rem;
+            right: 0;
+            font-size: 2rem;
+            padding: 5px;
+            font-weight: 300;
+            box-shadow: -2px 3px 46px -5px rgba(0, 0, 0, 0.75);
+            text-align: right;
+
+            @include respond(tab-v) {
+                top: -5rem;
+                font-size: 3rem;
+            }
+        }
+
+        &-item {
+            margin-top: 1rem;
+            width: 6rem;
+            height: 6rem;
+            text-align: center;
+            border-radius: 5px;
+            box-shadow: -2px 3px 46px -5px rgba(0, 0, 0, 0.75);
+
+            @include respond(phone) {
+                width: 7rem;
+                height: 7rem;
+            }
+
+            @include respond(tab-v) {
+                width: 12rem;
+                height: 12rem;
+            }
+
+            &--1 {
+                margin-top: 30rem;
+            }
+
+            &--2 {
+                margin-top: 25rem;
+            }
+
+            &--3 {
+                margin-top: 20rem;
+            }
+
+            &--4 {
+                margin-top: 15rem;
+            }
+
+            &--5 {
+                margin-top: 10rem;
+            }
+
+            &--6 {
+                margin-top: 5rem;
+            }
+        }
+        
+        &-list {
+            display: flex;
+            justify-content: space-between;
+            list-style-type: none;
+            font-weight: 300;
+        }
+
+        &-text {
+            margin: 0;
+            padding: 2px;
+            font-size: 1rem;
+            font-weight: 300;
+            text-align: center;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+
+            @include respond(tab-v) {
+                padding: 5px;
+                font-size: 1.6rem;
+            }
+        }
+
+        &-icon-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 74%;
+        }
+
+        &-icon {
+            color: $base-color-font;
+            width: 2.5rem;
+            padding: 2px;
+
+            @include respond(phone) {
+                width: 3rem;
+                padding: 2px;
+            }
+
+            @include respond(tab-v) {
+                width: 6rem;
+                padding: 5px;
+            }
+
+            &--sm {
+                margin-top: -1rem;
+            }
+        }
+    }
+
+    &__devops {
+        color: $base-color-font-reverse;
+        position: relative;
+        margin-top: 1rem;
+        min-height: 45rem;
+
+        &-title {
+            display: inline-block;
+            position: absolute;
+            top: -5rem;
+            left: 0;
+            font-size: 2rem;
+            padding: 5px;
+            font-weight: 300;
+            box-shadow: -2px 0 26px -5px rgba(38, 109, 107, 0.55);
+            text-align: right;
+
+            @include respond(tab-v) {
+                font-size: 3rem;
+            }
+        }
+
+        &-item {
+            margin-top: 1rem;
+            width: 6rem;
+            height: 6rem;
+            text-align: center;
+            border-radius: 5px;
+            box-shadow: -2px 13px 46px -5px rgba(38, 109, 107, 0.55);
+
+            @include respond(phone) {
+                width: 7rem;
+                height: 7rem;
+            }
+
+            @include respond(tab-v) {
+                width: 12rem;
+                height: 12rem;
+            }
+
+            &--6 {
+                margin-top: 25rem;
+            }
+
+            &--5 {
+                margin-top: 20rem;
+            }
+
+            &--4 {
+                margin-top: 15rem;
+            }
+
+            &--3 {
+                margin-top: 10rem;
+            }
+
+            &--2 {
+                margin-top: 5rem;
+            }
+        }
+        
+        &-list {
+            display: flex;
+            justify-content: space-between;
+            list-style-type: none;
+            font-weight: 300;
+        }
+
+        &-text {
+            margin: 0;
+            padding: 2px;
+            font-size: 1rem;
+            font-weight: 300;
+            text-align: center;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+
+            @include respond(tab-v) {
+                padding: 5px;
+                font-size: 1.6rem;
+            }
+        }
+
+        &-icon-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 74%;
+        }
+
+        &-icon {
+            color: $base-color-font;
+            width: 2.5rem;
+            padding: 2px;
+
+            @include respond(phone) {
+                width: 3rem;
+                padding: 2px;
+            }
+
+            @include respond(tab-v) {
+                width: 6rem;
+                padding: 5px;
+            }
+        }
+    }
+}
+
+

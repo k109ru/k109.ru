@@ -1,0 +1,754 @@
+.main {
+    padding-top: 10rem;
+    color: $base-color-font;
+    font-size: 7rem;
+    line-height: 3rem;
+    font-weight: 300;
+    text-align: center;
+    text-transform: uppercase;
+
+    &__features {
+        max-width: 1080px;
+        margin: 0 auto;
+        margin-top: 24rem;
+
+        @include respond(tab-v) {
+            margin-top: 39rem;
+        }
+        @include respond(tab-h) {
+            margin-top: 37rem;
+        }
+        @include respond(desktop) {
+            margin-top: 32rem;
+        }
+    }
+
+    &__advantages {
+        margin-top: 6rem;
+    }
+
+    &__desires {
+        margin-top: 6rem;
+    }
+
+    &__plan {
+        max-width: 1080px;
+        margin: 0 auto;
+        margin-top: 3rem;
+
+        @include respond(tab-v) {
+            margin-top: 6rem;
+        }
+
+        @include respond(tab-h) {
+            margin-top: 3rem;
+        }
+    }
+
+    &__prove {
+        margin-top: 6rem;
+    }
+
+    &__connect {
+        max-width: 1080px;
+        margin: 0 auto;
+        margin-top: 10rem;
+
+        @include respond(tab-v) {
+            margin-top: 4rem;
+        }
+    }
+}
+
+@keyframes showTopText {
+    0% {
+        transform: translate3d(0, 100%, 0);
+    }
+    40%, 60% {
+        transform: translate3d(0, 50%, 0);
+        opacity: 0;
+    }
+    90% {
+        transform: translate3d(0, 0, 0);
+        opacity: 0.8;
+    }
+    100% {
+        transform: translate3d(0, 0, 0);
+        opacity: 1;
+    }
+}
+
+@keyframes showBottomText {
+    0% {
+        transform: translate3d(0, -100%, 0);
+        opacity: 0;
+    }
+    40%, 60% {
+        transform: translate3d(0, -50%, 0);
+        opacity: 0;
+    }
+    90% {
+        transform: translate3d(0, 0, 0);
+        opacity: 0.8;
+    }
+    100% {
+        transform: translate3d(0, 0, 0);
+        opacity: 1;
+    }
+}
+
+.main__intro-text {
+    font-size: 4rem;
+    line-height: 5rem;
+
+    @include respond(tab-v) {
+        font-size: 8rem;
+    }
+}
+
+.animated__text--top {
+    bottom: 0;
+    transform: translate(0, 100%);
+    animation: showTopText 4s;
+    opacity: 0;
+    font-weight: 300;
+    animation-fill-mode: forwards;
+}
+
+.animated__text--bottom {
+    top: 0;
+    transform: translate(0, -100%);
+    animation: showBottomText 4s;
+    opacity: 0;
+    animation-delay: 1.5s;
+    animation-fill-mode: forwards;
+}
+
+.features {
+    color: $base-color-font-reverse;
+    
+    &__title {
+        font-size: 3rem;
+        font-weight: 300;
+    }
+
+    &__subtitle {
+        font-weight: 300;
+    }
+
+    &__icon {
+        margin: 3rem 0;
+        font-size: 3rem;
+        color: $base-color-icon;
+    }
+
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        list-style-type: none;
+    }
+
+    &__item {
+        max-width: 20rem;
+        margin: 2rem;
+        font-size: 2rem;
+    }
+
+    &__text {
+        font-size: 1.5rem;
+        line-height: 1.6rem;
+    }
+}
+
+.advantages {
+    position: relative;
+    color: $base-color-font;
+    text-shadow: 1px 1px 2px rgb(0, 0, 0), 0 0 1em rgb(14, 13, 13);
+
+    &__container {
+        max-width: 1080px;
+        margin: 0 auto;
+        padding-top: 1rem;
+        padding-bottom: 2rem;
+        margin-bottom: 10rem;
+
+        @include respond(tab-v) {
+            padding-top: 5rem;
+        }
+
+        @include respond(tab-h) {
+            padding-top: 2rem;
+        }
+    }
+
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        list-style-type: none;
+    }
+
+    &__item {
+        max-width: 45rem;
+        margin: 1.2rem;
+        padding: 1rem;
+        background-color: rgba(67, 147, 167, 0.7);
+        box-shadow: -2px 3px 46px -5px rgba(0, 0, 0, 0.75);
+    }
+
+    &__icon {
+        font-size: 3rem;
+        padding: 1rem;
+    }
+
+    &__text {
+        font-size: 2rem;
+    }
+
+    &__title {
+        font-size: 2.5rem;
+        font-weight: 300;
+    }
+
+    &__background-img {
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        width: 100%;
+        height: 1100px;
+        background-image: url("../img/2.png");
+        background-size: cover;
+
+        @include respond(phone) {
+            height: 1000px;
+        }
+
+        @include respond(tab-v) {
+            height: 500px;
+        }
+    }
+
+    &__gradient-img {
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        width: 100%;
+        height: 1100px;
+        background: linear-gradient(-45deg, #e4e9eb, #a1f5e1);
+        background-size: 200% 200%;
+        opacity: 0.85;
+
+        @include respond(phone) {
+            height: 1000px;
+        }
+
+        @include respond(tab-v) {
+            height: 500px;
+        }
+    }
+}
+
+.plan {
+    color: $base-color-font-reverse;
+
+    &__title {
+        font-size: 4rem;
+        font-weight: 300;
+        line-height: 4rem;
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+
+        @include respond(tab-v) {
+            flex-direction: row;
+        }
+    }
+
+    &__item {
+        margin-top: 1rem;
+    }
+
+    &__item-b {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__chart {
+        max-width: 25rem;
+    }
+
+    &__text {
+        font-size: 2rem;
+        font-weight: 300;
+    }
+
+    &__arrow {
+        max-width: 8rem;
+        transform: rotateX(180deg);
+
+        @include respond(phone) {
+            max-width: 10rem;
+        }
+
+        &-item {
+            position: relative;
+            width: 7rem;
+
+            @include respond(phone) {
+                width: 9rem;
+            }
+            
+            @include respond(tab-v) {
+                width: 15rem;
+            }
+
+            &--1 {
+                margin-top: 24rem;
+            }
+
+            &--2 {
+                margin-top: 18rem;
+            }
+
+            &--3 {
+                margin-top: 12rem;
+            }
+
+            &--4 {
+                margin-top: 6rem;
+            }
+        }
+
+        &-num {
+            position: absolute;
+            top: 6rem;
+            left: 4.5rem;
+            font-size: 2.5rem;
+            color: $base-color-font;
+            text-shadow: 1px 1px 2px rgb(39, 35, 35), 0 0 1em rgb(175, 105, 105);
+
+            @include respond(phone) {
+                font-size: 3rem;
+                top: 6.5rem;
+                left: 6rem;
+            }
+
+            @include respond(tab-v) {
+                font-size: 3rem;
+                top: 8.5rem;
+                left: 8rem;
+            }
+        }
+
+        &-text {
+            font-size: 1.2rem;
+            font-weight: 300;
+
+            @include respond(phone) {
+                &--under {
+                    font-size: 1.2rem;
+                }
+            }
+
+            @include respond(tab-v) {
+                font-size: 2rem;
+            }
+
+            &--under {
+                font-size: 1rem;
+            }
+        }
+    }
+}
+
+.prove {
+    position: relative;
+    color: $base-color-font-reverse;
+
+    &__container {
+        max-width: 1080px;
+        max-height: 60rem;
+        margin: 0 auto;
+        padding: 1.5rem;
+
+        @include respond(tab-v) {
+            padding: 4rem;
+        }
+
+        @include respond(tab-h) {
+            padding: 1rem;
+        }
+    }
+
+    &__title {
+        font-size: 3rem;
+        font-weight: 300;
+    }
+
+    &__card {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        max-width: 60rem;
+        min-height: 16rem;
+        margin: 1.5rem auto;
+        border-radius: 5px;
+        box-shadow: $base-shadow;
+
+        @include respond(tab-v) {
+            margin-left: 1.5rem;
+            min-height: 12rem;
+        }
+
+        &--2 {
+           
+            @include respond(tab-v) {
+                margin-left: 25%;
+            }
+        }
+
+        &--3 {
+            
+            @include respond(tab-v) {
+                margin-left: 50%;
+            }
+        }
+    }
+
+    &__icon {
+        width: 11rem;
+    }
+
+    &__text {
+        font-size: 2rem;
+        font-weight: 300;
+        padding: 5px;
+        line-height: 3rem;
+
+        @include respond(tab-v) {
+            font-size: 2.5rem;
+            font-weight: 300;
+            padding: 5px;
+            line-height: 3.5rem;
+        }
+    }
+
+    &__link {
+        font-size: 2rem;
+        font-weight: 300;
+        border-bottom: 1px solid rgba(19, 100, 96, 0.5);
+        transition: 0.3s;
+
+        @include respond(tab-v) {
+            font-size: 2.5rem;
+            font-weight: 300;
+        }
+    }
+
+    &__link:hover {
+        color: $base-color-icon;
+        border-bottom: 1px solid $base-color-icon;
+    }
+
+    &__background-img {
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        width: 100%;
+        height: 70rem;
+        background-image: url("../img/3.jpg");
+        background-size: cover;
+
+        @include respond(tab-v) {
+            height: 500px;
+        }
+    }
+
+    &__gradient-img {
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        width: 100%;
+        height: 70rem;
+        background: linear-gradient(-45deg, #e4e9eb, #a1f5e1);
+        background-size: 200% 200%;
+        opacity: 0.85;
+
+        @include respond(tab-v) {
+            height: 500px;
+        }
+    }
+}
+
+.connect {
+    color: $base-color-font-reverse;
+
+    &__title {
+        font-size: 3rem;
+        font-weight: 300;
+    }
+
+    &__form-container {
+        position: relative;
+        max-width: 38rem;
+        min-height: 60rem;
+        margin: 0 auto;
+        padding: 1rem;
+        margin-top: 5rem;
+        background-image: linear-gradient(to right, rgba(83, 179, 179, 0.6) 0%, rgba(24, 177, 169, 0.8) 55%), url("../img/face.jpg"),;
+        background-size: cover;
+        box-shadow: $base-shadow;
+
+        @include respond(tab-v) {
+            max-width: 88rem;
+            background-image: linear-gradient(to right, rgba(83, 179, 179, 0.2) 0%, rgba(24, 177, 169, 0.8) 55%), url("../img/face.jpg"),;
+        }
+    }
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 0;
+
+    @include respond(tab-v) {
+        margin-left: 45rem;
+    }
+    @include respond(tab-h) {
+        margin-left: 50rem;
+    }
+  
+    &__item {
+        margin: 1rem;
+    }
+
+    &__label {
+        display: block;
+        margin: 5px;
+        font-size: 2.5rem;
+        font-weight: 300;
+        text-align: left;
+        color: rgb(209, 224, 224);
+        text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.9), 0 0 1rem rgba(48, 46, 46, 0.1);
+
+        @include respond(tab-v) {
+            font-size: 3rem;
+        }
+
+    }
+
+    &__input {
+        display: block;
+        height: 4.5rem;
+        border: 1px solid transparent;
+        padding: 0 5px;
+        font-size: 2.5rem;
+        font-weight: 300;
+        border-radius: 4px;
+        box-shadow: $base-shadow;
+        background-color: rgba(255, 255, 255, 0.25);
+        color: rgb(209, 224, 224);
+        text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.9), 0 0 1rem rgba(48, 46, 46, 0.1);
+
+        @include respond(tab-v) {
+            font-size: 3rem;
+        }
+    }
+
+    &__radios {
+        display: flex;
+        position: relative;
+        max-width: 37rem;
+    }
+
+    &__textarea {
+        max-width: 31.5rem;
+        overflow: auto;
+        border: 1px solid transparent;
+        resize: none;
+        font-size: 2rem;
+        color: rgb(209, 224, 224);
+        text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.9), 0 0 1rem rgba(48, 46, 46, 0.1);
+        border-radius: 4px;
+        box-shadow: $base-shadow;
+        background-color: rgba(255, 255, 255, 0.25);
+
+        @include respond(tab-v) {
+            max-width: 52rem;
+            min-width: 39rem;
+        }
+
+        @include respond(tab-h) {
+            max-width: 52rem;
+            min-width: 36.2rem;
+        }
+    }
+
+    &__button {
+        width: 20rem;
+        border: 1px solid transparent;
+        padding: 1rem 3rem;
+        transition: 0.3s;
+        margin-top: 3rem;
+        font-size: 2rem;
+        font-weight: 300;
+        color: $base-color-font;
+        text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.9), 0 0 1rem rgba(48, 46, 46, 0.1);
+        border-radius: 4px;
+        box-shadow: $base-shadow;
+        background-color: rgba(255, 255, 255, 0.25);
+    }
+
+    &__button:hover:enabled {
+        background-color: rgba(0, 0, 0, 0.55);
+    }
+
+    // &-button:disabled {
+    //     background-color: rgba(255, 255, 255, 0.05);
+    // }
+
+    &__button:disabled {
+        color: rgba(255, 255, 255, 0.2);
+        background-color: rgba(104, 91, 91, 0.15);
+    }
+}
+
+.form__radio {
+
+    &-group {
+        display: inline-block;
+        width: 15rem;
+        margin-bottom: 1.5rem;
+
+        @include respond(tab-v) {
+            width: 25rem;
+            margin-bottom: 2rem;
+        }
+    }
+
+    &-input {
+        position: absolute;
+        opacity: 0;
+
+        &--1 {
+            top: 2.5rem;
+            left: 2.5rem;
+        }
+
+        &--2 {
+            top: 2.5rem;
+            left: 22.2rem;
+        }
+    }
+
+    &-label {
+        font-size: 2rem;
+        font-weight: 300;
+        cursor: pointer;
+        position: relative;
+        padding-left: 4.5rem;
+        padding-top: 3px;
+        color: rgb(209, 224, 224);
+        text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.9), 0 0 1rem rgba(48, 46, 46, 0.1);
+
+        @include respond(tab-v) {
+            padding-top: 0;
+            font-size: 2.5rem;
+        }
+    }
+
+    &-button {
+        display: inline-block;
+        position: absolute;
+        top: -.4rem;
+        left: 0;
+        width: 3rem;
+        height: 3rem;
+        border: 5px solid  rgba(255, 255, 255, 0.45);
+        border-radius: 50%;
+        box-shadow: $base-shadow;
+
+        &::after {
+            content: "";
+            display: block;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 1.3rem;
+            height: 1.3rem;
+            transform: translate(-50%, -50%);
+            transition: opacity .2s;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.45);
+            opacity: 0;
+        }
+    }
+
+    &-button:focus {
+        outline: transparent;
+        border-radius: 50%;
+        box-shadow: 0 -1px 32px 2px rgba(233, 91, 190, 0.85);
+    }
+
+    &-button:active {
+        box-shadow: 0 -1px 32px 2px rgba(233, 91, 190, 0.85);
+    }
+
+    &-input:checked ~ &-label &-button::after {
+        opacity: 1;
+    }
+}
+
+.modal {
+    display: none;
+    align-items: center;
+    position: fixed; 
+    left: 50%; 
+    top: 50%;
+    width: 90%;
+    height: 90%; 
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.8);
+    transform: translate(-50%,-50%);
+    animation-name: animatetop;
+    animation-duration: 0.6s;
+
+    @include respond(phone) {
+        width: 50%;
+        height: 50%; 
+    }
+
+  }
+
+  .modal__text {
+    vertical-align: middle;
+    font-size: 3rem;
+    font-weight: 300;
+    line-height: 6rem;
+
+    @include respond(tab-v) {
+        font-size: 4rem;
+    }
+  
+    &--ok {
+        display: none;
+        color: rgb(68, 170, 68);
+    }
+
+    &--bad {
+        display: none;
+        color: rgb(241, 123, 123);
+    }
+
+  }
+
+  @keyframes animatetop {
+    from {top: 40%; opacity:0}
+    to {top: 50%; opacity:1}
+  }

@@ -1,0 +1,294 @@
+.about {
+    color: $base-color-font;
+    font-weight: 300;
+
+    &__title {
+        max-width: 1080px;
+        margin: 0 auto;
+        margin-top: 2rem;
+        padding-left: 5px;
+        font-size: 3rem;
+        font-weight: 300;
+        color: $base-color-font;
+
+        @include respond(tab-v) {
+            font-size: 5rem;
+        }
+    }
+
+    &__life {
+        margin-top: 4rem;
+        color: $base-color-font;
+    }
+}
+
+.me {
+    max-width: 1080px;
+    margin: 0 auto;
+    margin-top: 6rem;
+
+    &__title {
+        padding: 5px;
+        font-size: 2rem;
+        font-weight: 300;
+
+        @include respond(tab-v) {
+            font-size: 4rem;
+        }
+    }
+
+    &__text {
+        padding: 5px;
+        font-size: 1.5rem;
+        font-weight: 300;
+
+        @include respond(phone) {
+            font-size: 2rem;
+        }
+
+        @include respond(tab-v) {
+            font-size: 2.5rem;
+        }
+    }
+
+    &__link {
+        text-align: end;
+        padding: 5px;
+    }
+
+    &__resume {
+        padding-bottom: 5px;
+        font-size: 2rem;
+        font-weight: 300;
+        border-bottom: 1px solid $base-color-font;
+        text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.9), 0 0 1rem rgba(48, 46, 46, 0.1);
+       
+        @include respond(phone) {
+            text-shadow: 1px 1px 1px rgba(0, 0, 0, 0), 0 0 1rem rgba(48, 46, 46, 0);
+        }
+
+    }
+
+    &__resume:hover {
+        color: rgb(253, 243, 243);
+        border-bottom: 1px solid rgba(253, 243, 243, 0.6);
+        text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.9), 0 0 1rem rgba(48, 46, 46, 0.1);
+    }
+
+    &__resume:visited {
+        text-decoration: none;
+    }
+}
+
+.life {
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+    max-width: 1080px;
+    margin: 0 auto;
+    font-size: 2rem;
+    margin-top: 20rem;
+
+    @include respond(phone) {
+        margin-top: 20rem;
+    }
+
+    @include respond(tab-v) {
+        margin-top: 30rem;
+    }
+
+    @include respond(tab-h) {
+        margin-top: 20rem;
+    }
+
+    &__background-img {
+        position: absolute;
+        z-index: -1;
+        top: 1px;
+        width: 100%;
+        min-height: 140rem;
+        background-image: url("../img/clock.jpg");
+        background-size: cover;
+        filter: blur(1px);
+        border-radius: 5px;
+
+        @include respond(phone) {
+            min-height: 120.3rem;
+        }
+
+        @include respond(tab-v) {
+            min-height: 125.3rem;
+        }
+    }
+
+    &__gradient-img {
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        min-width: 100.2%;
+        min-height: 140.3rem;
+        background: linear-gradient(-45deg, rgb(29, 54, 65), rgb(100, 161, 147));
+        background-size: 200% 200%;
+        opacity: 0.85;
+        border-radius: 5px;
+
+        @include respond(phone) {
+            min-height: 120.3rem;
+        }
+
+        @include respond(tab-v) {
+            min-height: 125.3rem;
+        }
+    }
+}
+
+.work {
+
+    &__name {
+        min-height: 3rem;
+        padding: 10px 5px 5px 5px;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+        text-align: center;
+        background-color: rgba(175, 172, 166, 0.3);
+    }
+
+    &__date {
+        padding: 5px;
+    }
+
+    &__org {
+        padding: 5px;
+    }
+}
+
+.work__item {
+    margin: 5px;
+    border-radius: 5px;
+    list-style-type: none;
+    box-shadow: -2px 3px 46px -5px rgba(0, 0, 0, 0.75);
+
+    &--22 {
+        margin-top: 23rem;
+    }
+
+    &--5 {
+        margin-top: 5rem;
+    }
+}
+
+.line__item {
+    position: relative;
+    color: $base-color-icon;
+    min-height: 20rem;
+    list-style-type: none;
+    border-right: 2px solid rgba(201, 216, 215, 0.1);
+
+    &-icon {
+        position: absolute;
+        top: 6rem;
+        left: -6px;
+        color: $base-color-icon;
+        background-color: rgba(70, 112, 106, 0.5);
+        border-radius: 5px;
+    }
+}
+
+.education {
+    padding-top: 3rem;
+    
+    &__name {
+        min-height: 3rem;
+        padding: 10px 5px 5px 5px;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+        text-align: center;
+        background-color: rgba(175, 172, 166, 0.3);
+    }
+
+    &__date {
+        padding: 5px;
+
+        &--sm {
+            margin-bottom: 0.5rem;
+        }
+    }
+
+    &__type {
+        margin: 0;
+        font-size: 1.5rem;
+        padding: 0 5px;
+    }
+
+    &__org {
+        padding: 5px;
+        list-style-type: none;
+
+        &--sm {
+            margin-top: 0.2rem;
+        }
+    }
+}
+
+.education__item {
+    min-height: 15rem;
+    margin: 5px;
+    border-radius: 5px;
+    list-style-type: none;
+    box-shadow: -2px 3px 46px -5px rgba(0, 0, 0, 0.75);
+
+    &--2 {
+        margin-top: 2rem;
+    }
+
+    &--4 {
+        margin-top: 4rem;
+    }
+
+    &--5 {
+        margin-top: 5rem;
+    }
+}
+
+.technologies {
+    margin-top: 10rem;
+    width: 100%;
+    min-height: 30rem;
+    color: $base-color-font-reverse;
+    background-color: rgb(247, 247, 241);
+
+    @include respond(tab-v) {
+        margin-top: 20rem;
+        min-height: 40rem;
+    }
+    
+    &__container {
+        position: relative;
+        max-width: 1080px;
+        margin: 0 auto;
+    }
+
+    &__title {
+        position: absolute;
+        top: 22rem;
+        padding: 5px;
+        font-size: 3rem;
+        font-weight: 300;
+
+        @include respond(tab-v) {
+            position: relative;
+            top: 0;
+        }
+    }
+
+    &__logo {
+        position: absolute;
+        top: -4rem;
+        right: 1rem;
+        max-width: 30rem;
+
+        @include respond(tab-v) {
+            max-width: 50rem;
+        }
+    }
+}

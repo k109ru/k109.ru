@@ -1,0 +1,38 @@
+// #ui {
+//     transform-style: preserve-3d;
+//     .text {
+
+//         @include respond(tab-v) {
+//             text-shadow: 10px 5px 15px rgb(94, 127, 219);
+//         }
+        
+//         position: absolute;
+//         font-size: 8rem;
+//         font-weight: 700;
+//         text-shadow: 2px 5px 4px rgb(94, 127, 219);
+//         color: #fff;
+//         line-height: $base-color-font;
+//         padding: 20px 0;
+//         mix-blend-mode: screen;
+//         transform-style: preserve-3d;
+//         @for $i from 1 through 26 {
+//             $key: $i - 1;
+//             $param: 5;
+//             &:nth-child(#{$i}) {
+//                 clip-path: polygon(-30% + ($key * $param) 0, -20% + ($key * $param) 0, 20% + ($key * $param) 100%, 0% + ($key * $param) 100%);
+//                 animation: wave 2000ms $key * 200 - 10000ms ease-in-out infinite alternate;
+//             }
+//         }
+//     }
+// }
+
+// @keyframes wave {
+//     0% {
+//         transform: translate(-50%, -50%) scale(0.9) rotateX(20deg) rotateY(20deg) rotateZ(0deg);
+//         color: rgb(20, 93, 105);
+//     }
+//     100% {
+//         transform: translate(-50%, -50%) scale(1.1) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+//         color: rgba(50, 230, 255, 1);
+//     }
+// }

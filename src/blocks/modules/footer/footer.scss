@@ -1,0 +1,105 @@
+.footer {
+    margin-top: 6rem;
+    color: $base-color-font-reverse;
+
+    &__container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        max-width: 1080px;
+        min-height: 6rem;
+        margin: 0 auto;
+        padding: 0 1rem;
+        border-top: 1px solid $base-color-font-reverse;
+    }
+
+    &__item {
+        max-width: 40rem;
+    }
+
+    &__copyright {
+        display: none;
+
+        @include respond(phone) {
+            display: block;
+        }
+    }
+}
+
+.social {
+    
+    &__list {
+        display: flex;
+        list-style-type: none;
+    }
+
+    &__item {
+        font-size: 2rem;
+        padding: 0 3px;
+    }
+
+    &__link {
+        padding: 0 4px;
+    }
+}
+
+.footer__logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+}
+
+.neon {
+    position: relative;
+    overflow: hidden;
+    filter: brightness(200%);
+}
+
+.text-logo {
+    position: relative;
+    padding: 15px;
+    background-color: rgb(255, 255, 255);
+    color: rgb(35, 212, 189);
+    font-size: 4rem;
+    font-weight: 700;
+    font-family: sans-serif;
+    user-select: none;
+}
+
+.text-logo::before {
+    content: attr(data-text);
+    position: absolute;
+    color: rgb(92, 42, 39);
+    filter: blur(0.02em);
+    mix-blend-mode: difference;
+}
+
+.gradient {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(45deg, rgb(206, 188, 188), rgb(253, 246, 203), rgb(185, 230, 185), rgb(241, 232, 180), rgb(240, 216, 216));
+    mix-blend-mode: multiply;
+}
+
+.spotlight {
+    position: absolute;
+    top: -100%;
+    right: 0;
+    bottom: 0;
+    left: -100%;
+    animation: light 15s linear infinite;
+    background: 
+        radial-gradient(circle, rgb(0, 0, 0), transparent 25%) center / 25% 25%,
+        radial-gradient(circle, rgb(0, 0, 0), rgb(142, 224, 204) 25%) center / 12.5% 12.5%;
+    mix-blend-mode: color-dodge;
+}
+
+@keyframes light {
+    to {
+        transform: translate(50%, 50%);
+    }
+}
