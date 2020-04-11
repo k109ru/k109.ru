@@ -44,11 +44,11 @@
 }
 
 .nav {
-    display: none;
 
     @include respond(tab-v) {
         display: block;
     }
+    display: none;
 
     &__list {
         display: flex;

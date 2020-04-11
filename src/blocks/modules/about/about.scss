@@ -3,6 +3,10 @@
     font-weight: 300;
 
     &__title {
+
+        @include respond(tab-v) {
+            font-size: 5rem;
+        }
         max-width: 1080px;
         margin: 0 auto;
         margin-top: 2rem;
@@ -10,10 +14,6 @@
         font-size: 3rem;
         font-weight: 300;
         color: $base-color-font;
-
-        @include respond(tab-v) {
-            font-size: 5rem;
-        }
     }
 
     &__life {
@@ -28,19 +28,16 @@
     margin-top: 6rem;
 
     &__title {
-        padding: 5px;
-        font-size: 2rem;
-        font-weight: 300;
 
         @include respond(tab-v) {
             font-size: 4rem;
         }
+        padding: 5px;
+        font-size: 2rem;
+        font-weight: 300;
     }
 
     &__text {
-        padding: 5px;
-        font-size: 1.5rem;
-        font-weight: 300;
 
         @include respond(phone) {
             font-size: 2rem;
@@ -49,6 +46,9 @@
         @include respond(tab-v) {
             font-size: 2.5rem;
         }
+        padding: 5px;
+        font-size: 1.5rem;
+        font-weight: 300;
     }
 
     &__link {
@@ -57,16 +57,15 @@
     }
 
     &__resume {
+       
+        @include respond(phone) {
+            text-shadow: 1px 1px 1px rgba(0, 0, 0, 0), 0 0 1rem rgba(48, 46, 46, 0);
+        }
         padding-bottom: 5px;
         font-size: 2rem;
         font-weight: 300;
         border-bottom: 1px solid $base-color-font;
         text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.9), 0 0 1rem rgba(48, 46, 46, 0.1);
-       
-        @include respond(phone) {
-            text-shadow: 1px 1px 1px rgba(0, 0, 0, 0), 0 0 1rem rgba(48, 46, 46, 0);
-        }
-
     }
 
     &__resume:hover {
@@ -81,13 +80,6 @@
 }
 
 .life {
-    display: flex;
-    justify-content: space-around;
-    position: relative;
-    max-width: 1080px;
-    margin: 0 auto;
-    font-size: 2rem;
-    margin-top: 20rem;
 
     @include respond(phone) {
         margin-top: 20rem;
@@ -100,8 +92,23 @@
     @include respond(tab-h) {
         margin-top: 20rem;
     }
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+    max-width: 1080px;
+    margin: 0 auto;
+    font-size: 2rem;
+    margin-top: 20rem;
 
     &__background-img {
+
+        @include respond(phone) {
+            min-height: 120.3rem;
+        }
+
+        @include respond(tab-v) {
+            min-height: 125.3rem;
+        }
         position: absolute;
         z-index: -1;
         top: 1px;
@@ -111,6 +118,9 @@
         background-size: cover;
         filter: blur(1px);
         border-radius: 5px;
+    }
+
+    &__gradient-img {
 
         @include respond(phone) {
             min-height: 120.3rem;
@@ -119,9 +129,6 @@
         @include respond(tab-v) {
             min-height: 125.3rem;
         }
-    }
-
-    &__gradient-img {
         position: absolute;
         z-index: -1;
         top: 0;
@@ -131,14 +138,6 @@
         background-size: 200% 200%;
         opacity: 0.85;
         border-radius: 5px;
-
-        @include respond(phone) {
-            min-height: 120.3rem;
-        }
-
-        @include respond(tab-v) {
-            min-height: 125.3rem;
-        }
     }
 }
 
@@ -251,16 +250,16 @@
 }
 
 .technologies {
-    margin-top: 10rem;
-    width: 100%;
-    min-height: 30rem;
-    color: $base-color-font-reverse;
-    background-color: rgb(247, 247, 241);
 
     @include respond(tab-v) {
         margin-top: 20rem;
         min-height: 40rem;
     }
+    margin-top: 10rem;
+    width: 100%;
+    min-height: 30rem;
+    color: $base-color-font-reverse;
+    background-color: rgb(247, 247, 241);
     
     &__container {
         position: relative;
@@ -269,26 +268,26 @@
     }
 
     &__title {
-        position: absolute;
-        top: 22rem;
-        padding: 5px;
-        font-size: 3rem;
-        font-weight: 300;
 
         @include respond(tab-v) {
             position: relative;
             top: 0;
         }
+        position: absolute;
+        top: 22rem;
+        padding: 5px;
+        font-size: 3rem;
+        font-weight: 300;
     }
 
     &__logo {
-        position: absolute;
-        top: -4rem;
-        right: 1rem;
-        max-width: 30rem;
 
         @include respond(tab-v) {
             max-width: 50rem;
         }
+        position: absolute;
+        top: -4rem;
+        right: 1rem;
+        max-width: 30rem;
     }
 }

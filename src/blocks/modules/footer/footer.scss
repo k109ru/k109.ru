@@ -18,11 +18,11 @@
     }
 
     &__copyright {
-        display: none;
 
         @include respond(phone) {
             display: block;
         }
+        display: none;
     }
 }
 

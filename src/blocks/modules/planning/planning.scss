@@ -5,15 +5,15 @@
     color: $base-color-font;
 
     &__title {
+
+        @include respond(tab-v) {
+            font-size: 5rem;
+        }
         margin-top: 2rem;
         padding-left: 5px;
         font-size: 3rem;
         font-weight: 300;
         color: $base-color-font;
-
-        @include respond(tab-v) {
-            font-size: 5rem;
-        }
     }
 
     &__development {
@@ -22,6 +22,11 @@
         min-height: 60rem;
 
         &-title {
+
+            @include respond(tab-v) {
+                top: -5rem;
+                font-size: 3rem;
+            }
             display: inline-block;
             position: absolute;
             top: -4rem;
@@ -31,20 +36,9 @@
             font-weight: 300;
             box-shadow: -2px 3px 46px -5px rgba(0, 0, 0, 0.75);
             text-align: right;
-
-            @include respond(tab-v) {
-                top: -5rem;
-                font-size: 3rem;
-            }
         }
 
         &-item {
-            margin-top: 1rem;
-            width: 6rem;
-            height: 6rem;
-            text-align: center;
-            border-radius: 5px;
-            box-shadow: -2px 3px 46px -5px rgba(0, 0, 0, 0.75);
 
             @include respond(phone) {
                 width: 7rem;
@@ -55,6 +49,12 @@
                 width: 12rem;
                 height: 12rem;
             }
+            margin-top: 1rem;
+            width: 6rem;
+            height: 6rem;
+            text-align: center;
+            border-radius: 5px;
+            box-shadow: -2px 3px 46px -5px rgba(0, 0, 0, 0.75);
 
             &--1 {
                 margin-top: 30rem;
@@ -89,17 +89,17 @@
         }
 
         &-text {
+
+            @include respond(tab-v) {
+                padding: 5px;
+                font-size: 1.6rem;
+            }
             margin: 0;
             padding: 2px;
             font-size: 1rem;
             font-weight: 300;
             text-align: center;
             border-bottom: 1px solid rgba(0, 0, 0, 0.15);
-
-            @include respond(tab-v) {
-                padding: 5px;
-                font-size: 1.6rem;
-            }
         }
 
         &-icon-container {
@@ -110,9 +110,6 @@
         }
 
         &-icon {
-            color: $base-color-font;
-            width: 2.5rem;
-            padding: 2px;
 
             @include respond(phone) {
                 width: 3rem;
@@ -123,6 +120,9 @@
                 width: 6rem;
                 padding: 5px;
             }
+            color: $base-color-font;
+            width: 2.5rem;
+            padding: 2px;
 
             &--sm {
                 margin-top: -1rem;
@@ -137,6 +137,10 @@
         min-height: 45rem;
 
         &-title {
+
+            @include respond(tab-v) {
+                font-size: 3rem;
+            }
             display: inline-block;
             position: absolute;
             top: -5rem;
@@ -146,19 +150,9 @@
             font-weight: 300;
             box-shadow: -2px 0 26px -5px rgba(38, 109, 107, 0.55);
             text-align: right;
-
-            @include respond(tab-v) {
-                font-size: 3rem;
-            }
         }
 
         &-item {
-            margin-top: 1rem;
-            width: 6rem;
-            height: 6rem;
-            text-align: center;
-            border-radius: 5px;
-            box-shadow: -2px 13px 46px -5px rgba(38, 109, 107, 0.55);
 
             @include respond(phone) {
                 width: 7rem;
@@ -169,6 +163,12 @@
                 width: 12rem;
                 height: 12rem;
             }
+            margin-top: 1rem;
+            width: 6rem;
+            height: 6rem;
+            text-align: center;
+            border-radius: 5px;
+            box-shadow: -2px 13px 46px -5px rgba(38, 109, 107, 0.55);
 
             &--6 {
                 margin-top: 25rem;
@@ -199,30 +199,27 @@
         }
 
         &-text {
+
+            @include respond(tab-v) {
+                padding: 5px;
+                font-size: 1.6rem;
+            }
             margin: 0;
             padding: 2px;
             font-size: 1rem;
             font-weight: 300;
             text-align: center;
             border-bottom: 1px solid rgba(0, 0, 0, 0.15);
-
-            @include respond(tab-v) {
-                padding: 5px;
-                font-size: 1.6rem;
-            }
         }
 
         &-icon-container {
             display: flex;
-            justify-content: center;
             align-items: center;
+            justify-content: center;
             height: 74%;
         }
 
         &-icon {
-            color: $base-color-font;
-            width: 2.5rem;
-            padding: 2px;
 
             @include respond(phone) {
                 width: 3rem;
@@ -233,6 +230,9 @@
                 width: 6rem;
                 padding: 5px;
             }
+            color: $base-color-font;
+            width: 2.5rem;
+            padding: 2px;
         }
     }
 }

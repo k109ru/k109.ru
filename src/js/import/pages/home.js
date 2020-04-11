@@ -1,6 +1,7 @@
 const button = document.getElementById("form_button");
 const email = document.getElementById("email");
 
+/* eslint-disable */   
 const validateEmail = (email) => {
     if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)) {
         return (true);
@@ -41,9 +42,10 @@ const testData = (event) => {
         question
     };
     
+ 
         grecaptcha.execute('6Lf5jucUAAAAAD_bT8igqkBBV4N5T3sPk-RUVYmn', {action: "recaptcha"})
             .then((token) => {
-                fetch("http://localhost:3000/send-email",{
+                fetch("https://www.k109.ru/send-email",{
                     method: 'POST',
                     headers:{
                             'Accept': 'application/json, text/plain, */*',
@@ -95,5 +97,7 @@ const testData = (event) => {
             });
     
 };
+
+/* eslint-enable */
 
 document.getElementById("form").addEventListener("submit", testData);

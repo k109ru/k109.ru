@@ -8,9 +8,6 @@
     text-transform: uppercase;
 
     &__features {
-        max-width: 1080px;
-        margin: 0 auto;
-        margin-top: 24rem;
 
         @include respond(tab-v) {
             margin-top: 39rem;
@@ -21,6 +18,9 @@
         @include respond(desktop) {
             margin-top: 32rem;
         }
+        max-width: 1080px;
+        margin: 0 auto;
+        margin-top: 24rem;
     }
 
     &__advantages {
@@ -32,9 +32,6 @@
     }
 
     &__plan {
-        max-width: 1080px;
-        margin: 0 auto;
-        margin-top: 3rem;
 
         @include respond(tab-v) {
             margin-top: 6rem;
@@ -43,6 +40,9 @@
         @include respond(tab-h) {
             margin-top: 3rem;
         }
+        max-width: 1080px;
+        margin: 0 auto;
+        margin-top: 3rem;
     }
 
     &__prove {
@@ -50,13 +50,13 @@
     }
 
     &__connect {
-        max-width: 1080px;
-        margin: 0 auto;
-        margin-top: 10rem;
 
         @include respond(tab-v) {
             margin-top: 4rem;
         }
+        max-width: 1080px;
+        margin: 0 auto;
+        margin-top: 10rem;
     }
 }
 
@@ -98,12 +98,12 @@
 }
 
 .main__intro-text {
-    font-size: 4rem;
-    line-height: 5rem;
 
     @include respond(tab-v) {
         font-size: 8rem;
     }
+    font-size: 4rem;
+    line-height: 5rem;
 }
 
 .animated__text--top {
@@ -167,11 +167,6 @@
     text-shadow: 1px 1px 2px rgb(0, 0, 0), 0 0 1em rgb(14, 13, 13);
 
     &__container {
-        max-width: 1080px;
-        margin: 0 auto;
-        padding-top: 1rem;
-        padding-bottom: 2rem;
-        margin-bottom: 10rem;
 
         @include respond(tab-v) {
             padding-top: 5rem;
@@ -180,6 +175,11 @@
         @include respond(tab-h) {
             padding-top: 2rem;
         }
+        max-width: 1080px;
+        margin: 0 auto;
+        padding-top: 1rem;
+        padding-bottom: 2rem;
+        margin-bottom: 10rem;
     }
 
     &__list {
@@ -212,13 +212,6 @@
     }
 
     &__background-img {
-        position: absolute;
-        z-index: -1;
-        top: 0;
-        width: 100%;
-        height: 1100px;
-        background-image: url("../img/2.png");
-        background-size: cover;
 
         @include respond(phone) {
             height: 1000px;
@@ -227,9 +220,24 @@
         @include respond(tab-v) {
             height: 500px;
         }
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        width: 100%;
+        height: 1100px;
+        background-image: url("../img/2.png");
+        background-size: cover;
     }
 
     &__gradient-img {
+
+        @include respond(phone) {
+            height: 1000px;
+        }
+
+        @include respond(tab-v) {
+            height: 500px;
+        }
         position: absolute;
         z-index: -1;
         top: 0;
@@ -238,14 +246,6 @@
         background: linear-gradient(-45deg, #e4e9eb, #a1f5e1);
         background-size: 200% 200%;
         opacity: 0.85;
-
-        @include respond(phone) {
-            height: 1000px;
-        }
-
-        @include respond(tab-v) {
-            height: 500px;
-        }
     }
 }
 
@@ -259,14 +259,14 @@
     }
 
     &__list {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-around;
 
         @include respond(tab-v) {
             flex-direction: row;
         }
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
     }
 
     &__item {
@@ -288,16 +288,14 @@
     }
 
     &__arrow {
-        max-width: 8rem;
-        transform: rotateX(180deg);
 
         @include respond(phone) {
             max-width: 10rem;
         }
+        max-width: 8rem;
+        transform: rotateX(180deg);
 
         &-item {
-            position: relative;
-            width: 7rem;
 
             @include respond(phone) {
                 width: 9rem;
@@ -306,6 +304,8 @@
             @include respond(tab-v) {
                 width: 15rem;
             }
+            position: relative;
+            width: 7rem;
 
             &--1 {
                 margin-top: 24rem;
@@ -325,12 +325,6 @@
         }
 
         &-num {
-            position: absolute;
-            top: 6rem;
-            left: 4.5rem;
-            font-size: 2.5rem;
-            color: $base-color-font;
-            text-shadow: 1px 1px 2px rgb(39, 35, 35), 0 0 1em rgb(175, 105, 105);
 
             @include respond(phone) {
                 font-size: 3rem;
@@ -343,11 +337,15 @@
                 top: 8.5rem;
                 left: 8rem;
             }
+            position: absolute;
+            top: 6rem;
+            left: 4.5rem;
+            font-size: 2.5rem;
+            color: $base-color-font;
+            text-shadow: 1px 1px 2px rgb(39, 35, 35), 0 0 1em rgb(175, 105, 105);
         }
 
         &-text {
-            font-size: 1.2rem;
-            font-weight: 300;
 
             @include respond(phone) {
                 &--under {
@@ -358,6 +356,8 @@
             @include respond(tab-v) {
                 font-size: 2rem;
             }
+            font-size: 1.2rem;
+            font-weight: 300;
 
             &--under {
                 font-size: 1rem;
@@ -371,10 +371,6 @@
     color: $base-color-font-reverse;
 
     &__container {
-        max-width: 1080px;
-        max-height: 60rem;
-        margin: 0 auto;
-        padding: 1.5rem;
 
         @include respond(tab-v) {
             padding: 4rem;
@@ -383,6 +379,10 @@
         @include respond(tab-h) {
             padding: 1rem;
         }
+        max-width: 1080px;
+        max-height: 60rem;
+        margin: 0 auto;
+        padding: 1.5rem;
     }
 
     &__title {
@@ -391,6 +391,11 @@
     }
 
     &__card {
+
+        @include respond(tab-v) {
+            margin-left: 1.5rem;
+            min-height: 12rem;
+        }
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -399,11 +404,6 @@
         margin: 1.5rem auto;
         border-radius: 5px;
         box-shadow: $base-shadow;
-
-        @include respond(tab-v) {
-            margin-left: 1.5rem;
-            min-height: 12rem;
-        }
 
         &--2 {
            
@@ -425,10 +425,6 @@
     }
 
     &__text {
-        font-size: 2rem;
-        font-weight: 300;
-        padding: 5px;
-        line-height: 3rem;
 
         @include respond(tab-v) {
             font-size: 2.5rem;
@@ -436,18 +432,22 @@
             padding: 5px;
             line-height: 3.5rem;
         }
+        font-size: 2rem;
+        font-weight: 300;
+        padding: 5px;
+        line-height: 3rem;
     }
 
     &__link {
-        font-size: 2rem;
-        font-weight: 300;
-        border-bottom: 1px solid rgba(19, 100, 96, 0.5);
-        transition: 0.3s;
 
         @include respond(tab-v) {
             font-size: 2.5rem;
             font-weight: 300;
         }
+        font-size: 2rem;
+        font-weight: 300;
+        border-bottom: 1px solid rgba(19, 100, 96, 0.5);
+        transition: 0.3s;
     }
 
     &__link:hover {
@@ -456,6 +456,10 @@
     }
 
     &__background-img {
+
+        @include respond(tab-v) {
+            height: 500px;
+        }
         position: absolute;
         z-index: -1;
         top: 0;
@@ -463,13 +467,13 @@
         height: 70rem;
         background-image: url("../img/3.jpg");
         background-size: cover;
+    }
+
+    &__gradient-img {
 
         @include respond(tab-v) {
             height: 500px;
         }
-    }
-
-    &__gradient-img {
         position: absolute;
         z-index: -1;
         top: 0;
@@ -478,10 +482,6 @@
         background: linear-gradient(-45deg, #e4e9eb, #a1f5e1);
         background-size: 200% 200%;
         opacity: 0.85;
-
-        @include respond(tab-v) {
-            height: 500px;
-        }
     }
 }
 
@@ -494,28 +494,24 @@
     }
 
     &__form-container {
+
+        @include respond(tab-v) {
+            max-width: 88rem;
+            background-image: linear-gradient(to right, rgba(83, 179, 179, 0.2) 0%, rgba(24, 177, 169, 0.8) 55%), url("../img/face.png"),;
+        }
         position: relative;
         max-width: 38rem;
         min-height: 60rem;
         margin: 0 auto;
         padding: 1rem;
         margin-top: 5rem;
-        background-image: linear-gradient(to right, rgba(83, 179, 179, 0.6) 0%, rgba(24, 177, 169, 0.8) 55%), url("../img/face.jpg"),;
+        background-image: linear-gradient(to right, rgba(83, 179, 179, 0.6) 0%, rgba(24, 177, 169, 0.8) 55%), url("../img/face.png"),;
         background-size: cover;
         box-shadow: $base-shadow;
-
-        @include respond(tab-v) {
-            max-width: 88rem;
-            background-image: linear-gradient(to right, rgba(83, 179, 179, 0.2) 0%, rgba(24, 177, 169, 0.8) 55%), url("../img/face.jpg"),;
-        }
     }
 }
 
 .form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-left: 0;
 
     @include respond(tab-v) {
         margin-left: 45rem;
@@ -523,12 +519,24 @@
     @include respond(tab-h) {
         margin-left: 50rem;
     }
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 0;
+
+
   
     &__item {
         margin: 1rem;
     }
 
     &__label {
+
+        @include respond(tab-v) {
+            font-size: 3rem;
+        }
+
         display: block;
         margin: 5px;
         font-size: 2.5rem;
@@ -536,14 +544,14 @@
         text-align: left;
         color: rgb(209, 224, 224);
         text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.9), 0 0 1rem rgba(48, 46, 46, 0.1);
+    }
+
+    &__input {
 
         @include respond(tab-v) {
             font-size: 3rem;
         }
 
-    }
-
-    &__input {
         display: block;
         height: 4.5rem;
         border: 1px solid transparent;
@@ -555,10 +563,6 @@
         background-color: rgba(255, 255, 255, 0.25);
         color: rgb(209, 224, 224);
         text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.9), 0 0 1rem rgba(48, 46, 46, 0.1);
-
-        @include respond(tab-v) {
-            font-size: 3rem;
-        }
     }
 
     &__radios {
@@ -568,6 +572,16 @@
     }
 
     &__textarea {
+
+        @include respond(tab-v) {
+            min-width: 39rem;
+            max-width: 52rem;
+        }
+
+        @include respond(tab-h) {
+            min-width: 36.2rem;
+            max-width: 52rem;
+        }
         max-width: 31.5rem;
         overflow: auto;
         border: 1px solid transparent;
@@ -578,16 +592,6 @@
         border-radius: 4px;
         box-shadow: $base-shadow;
         background-color: rgba(255, 255, 255, 0.25);
-
-        @include respond(tab-v) {
-            max-width: 52rem;
-            min-width: 39rem;
-        }
-
-        @include respond(tab-h) {
-            max-width: 52rem;
-            min-width: 36.2rem;
-        }
     }
 
     &__button {
@@ -622,14 +626,14 @@
 .form__radio {
 
     &-group {
-        display: inline-block;
-        width: 15rem;
-        margin-bottom: 1.5rem;
 
         @include respond(tab-v) {
             width: 25rem;
             margin-bottom: 2rem;
         }
+        display: inline-block;
+        width: 15rem;
+        margin-bottom: 1.5rem;
     }
 
     &-input {
@@ -648,6 +652,11 @@
     }
 
     &-label {
+
+        @include respond(tab-v) {
+            padding-top: 0;
+            font-size: 2.5rem;
+        }
         font-size: 2rem;
         font-weight: 300;
         cursor: pointer;
@@ -656,11 +665,6 @@
         padding-top: 3px;
         color: rgb(209, 224, 224);
         text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.9), 0 0 1rem rgba(48, 46, 46, 0.1);
-
-        @include respond(tab-v) {
-            padding-top: 0;
-            font-size: 2.5rem;
-        }
     }
 
     &-button {
@@ -706,35 +710,33 @@
 }
 
 .modal {
-    display: none;
-    align-items: center;
-    position: fixed; 
-    left: 50%; 
-    top: 50%;
-    width: 90%;
-    height: 90%; 
-    background-color: rgb(0, 0, 0);
-    background-color: rgba(0, 0, 0, 0.8);
-    transform: translate(-50%,-50%);
-    animation-name: animatetop;
-    animation-duration: 0.6s;
 
     @include respond(phone) {
         width: 50%;
-        height: 50%; 
+        height: 50%;
     }
+    display: none;
+    align-items: center;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 90%;
+    height: 90%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    animation-name: animatetop;
+    animation-duration: 0.6s;
+}
 
-  }
-
-  .modal__text {
-    vertical-align: middle;
-    font-size: 3rem;
-    font-weight: 300;
-    line-height: 6rem;
+.modal__text {
 
     @include respond(tab-v) {
         font-size: 4rem;
     }
+    vertical-align: middle;
+    font-size: 3rem;
+    font-weight: 300;
+    line-height: 6rem;
   
     &--ok {
         display: none;
@@ -745,10 +747,15 @@
         display: none;
         color: rgb(241, 123, 123);
     }
+}
 
-  }
-
-  @keyframes animatetop {
-    from {top: 40%; opacity:0}
-    to {top: 50%; opacity:1}
-  }
+@keyframes animatetop {
+    from {
+        top: 40%;
+        opacity: 0;
+    }
+    to {
+        top: 50%;
+        opacity: 1;
+    }
+}

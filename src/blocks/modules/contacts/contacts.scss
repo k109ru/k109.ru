@@ -3,25 +3,25 @@
     margin: 0 auto;
 
     &__title {
+
+        @include respond(tab-v) {
+            font-size: 5rem;
+        }
         margin-top: 2rem;
         padding-left: 5px;
         font-size: 3rem;
         font-weight: 300;
         color: $base-color-font;
-
-        @include respond(tab-v) {
-            font-size: 5rem;
-        }
     }
 
     &__container {
-        display: flex;
-        align-items: center;
-        justify-content: center;
 
         @include respond(tab-h) {
             justify-content: space-between;
         }
+        display: flex;
+        align-items: center;
+        justify-content: center;
 
         &-item {
             padding: 1rem;
@@ -29,8 +29,6 @@
     }
 
     &__main {
-        font-size: 1.8rem;
-        min-width: 20rem;
 
         @include respond(phone) {
             font-size: 2rem;
@@ -41,17 +39,14 @@
             font-size: 3rem;
             min-width: 60rem;
         }
+        font-size: 1.8rem;
+        min-width: 20rem;
 
         &-list {
             list-style-type: none;
         }
 
         &-item {
-            margin: 2rem;
-            padding: 1rem;
-            color: $base-color-font;
-            border-radius: 5px;
-            box-shadow: -2px 3px 46px -5px rgba(0, 0, 0, 0.75);
 
             @include respond(tab-v) {
                 &--2 {
@@ -66,6 +61,11 @@
                     margin-left: 30rem;
                 }
             }
+            margin: 2rem;
+            padding: 1rem;
+            color: $base-color-font;
+            border-radius: 5px;
+            box-shadow: -2px 3px 46px -5px rgba(0, 0, 0, 0.75);
 
             &--1 {
                 margin-left: 0;
@@ -96,7 +96,6 @@
     }
 
     &__social {
-        min-width: 8rem;
 
         @include respond(tab-v) {
             min-width: 48rem;
@@ -128,12 +127,18 @@
                 }
             }
         }
+        min-width: 8rem;
 
         &-list {
             flex-direction: column;
         }
 
         &-link {
+
+            @include respond(tab-v) {
+                width: 6rem;
+                height: 6rem;
+            }
             display: table-cell;
             width: 4rem;
             height: 4rem;
@@ -143,11 +148,6 @@
             vertical-align: middle;
             color: $base-color-font;
             transition: 0.5s;
-
-            @include respond(tab-v) {
-                width: 6rem;
-                height: 6rem;
-            }
         }
 
         &-link:hover {
@@ -183,11 +183,11 @@
         }
 
         &-item > a {
-            font-size: 1.8rem;
 
             @include respond(tab-v) {
                 font-size: 2.5rem;
             }
+            font-size: 1.8rem;
         }
     }
 
@@ -197,13 +197,6 @@
 }
 
 .bye {
-    min-height: 20rem;
-    overflow: hidden;
-    backface-visibility: hidden;
-    background: rgb(255, 255, 255);
-    font: 5vw/20vh "Finger Paint", "Open Sans", sans-serif;
-    text-align: center;
-    color: transparent;
 
     @include respond(tab-v) {
         min-height: 40rem;
@@ -211,17 +204,24 @@
     @include respond(tab-h) {
         min-height: 30rem;
     }
+    min-height: 20rem;
+    overflow: hidden;
+    backface-visibility: hidden;
+    background: rgb(255, 255, 255);
+    font: 5vw/20vh "Finger Paint", "Open Sans", sans-serif;
+    text-align: center;
+    color: transparent;
 }
 
 .bye__span {
-    display: inline-block;
-    text-shadow: 0 0 0 $base-color-font-reverse;
-    font-size: 4rem;
-    animation: smoky 5s 3s both;
 
     @include respond(tab-v) {
         font-size: 8rem;
     }
+    display: inline-block;
+    text-shadow: 0 0 0 $base-color-font-reverse;
+    font-size: 4rem;
+    animation: smoky 5s 3s both;
 }
   
 .bye__span:nth-child(even) {

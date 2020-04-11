@@ -6,27 +6,27 @@
     }
    
     &__title {
+
+        @include respond(tab-v) {
+            font-size: 5rem;
+        }
         margin-top: 2rem;
         padding-left: 5px;
         font-size: 3rem;
         font-weight: 300;
         color: $base-color-font;
+    }
+
+    &__subtitle {
 
         @include respond(tab-v) {
             font-size: 5rem;
         }
-    }
-
-    &__subtitle {
         font-size: 2.5rem;
         font-weight: 300;
         color: $base-color-font;
         padding: 1rem;
         box-shadow: -2px 3px 46px -5px rgba(0, 0, 0, 0.75);
-
-        @include respond(tab-v) {
-            font-size: 5rem;
-        }
 
         &--1 {
             align-self: flex-start;
@@ -55,7 +55,6 @@
 }
 
 .frontend {
-    margin-top: 15rem;
 
     @include respond(tab-v) {
         margin-top: 25rem;
@@ -64,6 +63,7 @@
     @include respond(tab-h) {
         margin-top: 22rem;
     }
+    margin-top: 15rem;
 
     &__header {
         display: flex;
@@ -116,6 +116,10 @@
 }
 
 .web {
+
+    @include respond(tab-v) {
+        flex-direction: row;
+    }
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -124,15 +128,15 @@
     min-height: 65rem;
     margin: 0 auto;
 
-    @include respond(tab-v) {
-        flex-direction: row;
-    }
-
     &__container {
         position: relative;
     }
 
     &__background-img {
+
+        @include respond(tab-v) {
+            min-height: 65rem;
+        }
         position: absolute;
         z-index: -1;
         top: 1px;
@@ -141,13 +145,13 @@
         background-image: url("../img/2.png");
         background-size: cover;
         filter: blur(1px);
-
-        @include respond(tab-v) {
-            min-height: 65rem;
-        }
     }
 
     &__gradient-img {
+
+        @include respond(tab-v) {
+            min-height: 65.2rem;
+        }
         position: absolute;
         z-index: -1;
         top: 0;
@@ -156,10 +160,6 @@
         background: linear-gradient(-45deg, #e4e9eb, #a1f5e1);
         background-size: 200% 200%;
         opacity: 0.85;
-
-        @include respond(tab-v) {
-            min-height: 65.2rem;
-        }
     }
 }
 
@@ -268,16 +268,16 @@
 .frontend__workflow {
 
     &-container {
+
+        @include respond(tab-v) {
+            flex-direction: row;
+        }
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: space-between;
         max-width: 1080px;
         margin: 10rem auto;
-
-        @include respond(tab-v) {
-            flex-direction: row;
-        }
     }
 }
 
@@ -291,17 +291,16 @@
     }
 
     &__box {
-        display: flex;
-        justify-content: space-between;
-        padding-bottom: 3rem;
 
         @include respond(tab-v) {
             padding-bottom: 0;
         }
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 3rem;
     }
 
     &__icon {
-        display: none;
 
         @include respond(phone) {
             display: block;
@@ -312,6 +311,7 @@
             display: block;
             max-width: 19rem;
         }
+        display: none;
     }
 
     &__list {
@@ -341,12 +341,12 @@
     }
 
     &__item-icon {
-        max-width: 7rem;
-        padding: 5px;
 
         @include respond(phone) {
             max-width: 10rem;
         }
+        max-width: 7rem;
+        padding: 5px;
     }
 
     &__list {
@@ -390,6 +390,10 @@
     }
 
     &__header {
+
+        @include respond(phone) {
+            flex-direction: row;
+        }
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -397,15 +401,9 @@
         max-width: 1080px;
         margin: 8rem auto;
         padding: 5px;
-
-        @include respond(phone) {
-            flex-direction: row;
-        }
     }
 
     &__img {
-        max-width: 27rem;
-        height: 20rem;
 
         @include respond(phone) {
             display: block;
@@ -416,6 +414,8 @@
             max-width: 60rem;
             height: 100%;
         }
+        max-width: 27rem;
+        height: 20rem;
     }
 }
 
@@ -451,14 +451,6 @@
     }
 
     &__background-img {
-        position: absolute;
-        z-index: -1;
-        top: 1px;
-        width: 100%;
-        min-height: 292rem;
-        background-image: url("../img/2.png");
-        background-size: cover;
-        filter: blur(1px);
 
         @include respond(phone) {
             min-height: 182rem;
@@ -467,6 +459,14 @@
         @include respond(tab-v) {
             min-height: 65rem;
         }
+        position: absolute;
+        z-index: -1;
+        top: 1px;
+        width: 100%;
+        min-height: 292rem;
+        background-image: url("../img/2.png");
+        background-size: cover;
+        filter: blur(1px);
 
         @media only screen and (min-width: 28.5rem) {
             min-height: 182rem;
@@ -478,14 +478,6 @@
     }
 
     &__gradient-img {
-        position: absolute;
-        z-index: -1;
-        top: 0;
-        min-width: 100%;
-        min-height: 292.2rem;
-        background: linear-gradient(-45deg, #e4e9eb, #a1f5e1);
-        background-size: 200% 200%;
-        opacity: 0.85;
 
         @include respond(phone) {
             min-height: 182.2rem;
@@ -494,6 +486,14 @@
         @include respond(tab-v) {
             min-height: 65.2rem;
         }
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        min-width: 100%;
+        min-height: 292.2rem;
+        background: linear-gradient(-45deg, #e4e9eb, #a1f5e1);
+        background-size: 200% 200%;
+        opacity: 0.85;
 
         @media only screen and (min-width: 28.5rem) {
             min-height: 182.2rem;
@@ -564,7 +564,6 @@
     }
 
     &__img {
-        max-width: 35rem;
 
         @include respond(phone) {
             max-width: 55rem;
@@ -573,9 +572,14 @@
         @include respond(tab-v) {
             max-width: 70rem;
         }
+        max-width: 35rem;
     }
 
     &__background-img {
+
+        @include respond(tab-v) {
+            min-height: 65rem;
+        }
         position: absolute;
         z-index: -1;
         top: 1px;
@@ -584,13 +588,13 @@
         background-image: url("../img/2.png");
         background-size: cover;
         filter: blur(1px);
-
-        @include respond(tab-v) {
-            min-height: 65rem;
-        }
     }
 
     &__gradient-img {
+
+        @include respond(tab-v) {
+            min-height: 65.3rem;
+        }
         position: absolute;
         z-index: -1;
         top: 0;
@@ -599,24 +603,20 @@
         background: linear-gradient(-45deg, #e4e9eb, #a1f5e1);
         background-size: 200% 200%;
         opacity: 0.85;
-
-        @include respond(tab-v) {
-            min-height: 65.3rem;
-        }
     }
 }
 
 .devops__top {
+
+    @include respond(tab-v) {
+        flex-direction: row;
+    }
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     max-width: 1080px;
     margin: 0 auto;
     padding-top: 4rem;
-
-    @include respond(tab-v) {
-        flex-direction: row;
-    }
 }
 
 .ops {
@@ -789,11 +789,11 @@
         }
 
         &--eye {
-            margin-left: 35%;
 
             @include respond(tab-v) {
                 margin-left: 70%;
             }
+            margin-left: 35%;
         }
     }
 }

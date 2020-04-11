@@ -2,6 +2,10 @@
     position: relative;
 
     &__title {
+
+        @include respond(tab-v) {
+            font-size: 5rem;
+        }
         display: block;
         max-width: 1080px;
         margin: 0 auto;
@@ -10,21 +14,11 @@
         font-size: 3rem;
         font-weight: 300;
         color: $base-color-font;
-
-        @include respond(tab-v) {
-            font-size: 5rem;
-        }
     }
 }
 
 
 .project__platform {
-    max-width: 1080px;
-    margin: 0 auto;
-    margin-top: 30rem;
-    background: linear-gradient(-45deg, #1d7ea1, #25947a);
-    padding-top: 1rem;
-    padding-bottom: 2rem;
 
     @include respond(tab-v) {
         margin-top: 0;
@@ -39,8 +33,19 @@
         padding-bottom: 0;
         background: transparent;
     }
+    max-width: 1080px;
+    margin: 0 auto;
+    margin-top: 30rem;
+    background: linear-gradient(-45deg, #1d7ea1, #25947a);
+    padding-top: 1rem;
+    padding-bottom: 2rem;
 
     &-title {
+
+        @include respond(tab-v) {
+            font-size: 3rem;
+            top: 2rem;
+        }
         display: inline-block;
         position: absolute;
         top: 9rem;
@@ -52,23 +57,18 @@
         box-shadow: -2px 3px 46px -5px rgba(0, 0, 0, 0.75);
         text-align: right;
         color: $base-color-font;
-
-        @include respond(tab-v) {
-            font-size: 3rem;
-            top: 2rem;
-        }
     }
 
     &-container {
+
+        @include respond(tab-v) {
+            margin-top: 3rem;
+        }
         display: flex;
         flex-wrap: wrap;
         align-items: center;
         justify-content: space-around;
         margin-top: 7rem;
-
-        @include respond(tab-v) {
-            margin-top: 3rem;
-        }
     }
 }
 
@@ -261,16 +261,16 @@
 }
 
 .layout__project {
+
+    @include respond(tab-v) {
+        margin-top: 0;
+    }
     margin-top: 2rem;
     position: relative;
     min-width: 30rem;
     box-shadow: -2px 3px 46px -5px rgba(0, 0, 0, 0.75);
     text-align: center;
     border-radius: 5px;
-
-    @include respond(tab-v) {
-        margin-top: 0;
-    }
 
     &-title {
         font-size: 2rem;
@@ -340,6 +340,10 @@
     min-height: 60rem;
 
     &__background-img {
+
+        @include respond(tab-v) {
+            min-height: 65rem;
+        }
         position: absolute;
         z-index: -1;
         top: 1px;
@@ -349,16 +353,16 @@
         background-size: cover;
         filter: blur(1px);
 
-        @include respond(tab-v) {
-            min-height: 65rem;
-        }
-
         @media only screen and (min-width: 32.1em) {
             min-height: 105rem;
         }
     }
 
     &__gradient-img {
+
+        @include respond(tab-v) {
+            min-height: 65.2rem;
+        }
         position: absolute;
         z-index: -1;
         top: 0;
@@ -367,10 +371,6 @@
         background: linear-gradient(-45deg, rgb(119, 127, 129), rgb(111, 175, 160));
         background-size: 200% 200%;
         opacity: 0.85;
-
-        @include respond(tab-v) {
-            min-height: 65.2rem;
-        }
 
         @media only screen and (min-width: 32.1em) {
             min-height: 105rem;
@@ -439,15 +439,15 @@
     }
 
     &-list {
+
+        @include respond(tab-v) {
+            padding-bottom: 0;
+        }
         display: flex;
         flex-wrap: wrap;
         justify-content: space-around;
         list-style-type: none;
         padding-bottom: 2rem;
-
-        @include respond(tab-v) {
-            padding-bottom: 0;
-        }
     }
 
     &-item {

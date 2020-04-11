@@ -6,6 +6,7 @@ gulp.task("copy", () => {
     return gulp.src([
         "./src/views/favicon.ico",
         "./src/views/manifest.json",
+        "./src/views/manifest.min.json",
         "./src/views/resume.pdf"])
         .pipe(gulp.dest("./dist/"));
 });
