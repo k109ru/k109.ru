@@ -66,6 +66,7 @@ const testData = (event) => {
                         modal.setAttribute("style", "display:flex");
                         modalTextOk.setAttribute("style", "display:block");
                         form.reset();
+                        button.setAttribute("disabled", "disabled")
                         setTimeout(() => {
                             modal.setAttribute("style", "display:none");
                             modalTextOk.setAttribute("style", "display:none");
@@ -75,7 +76,8 @@ const testData = (event) => {
                         document.getElementById("bad").appendChild(document.createTextNode(data.msg));
                         modal.setAttribute("style", "display:flex");
                         modalTextBad.setAttribute("style", "display:block");
-                        
+                        form.reset();
+                        button.setAttribute("disabled", "disabled")
                         setTimeout(() => {
                             modal.setAttribute("style", "display:none");
                             modalTextBad.setAttribute("style", "display:none");
@@ -87,7 +89,8 @@ const testData = (event) => {
                     document.getElementById("bad").appendChild(document.createTextNode(" The message was not delivered, something went wrong"));
                     modal.setAttribute("style", "display:flex");
                     modalTextBad.setAttribute("style", "display:block");
-            
+                    form.reset();
+                    button.setAttribute("disabled", "disabled")
                     setTimeout(() => {
                         modal.setAttribute("style", "display:none");
                         modalTextBad.setAttribute("style", "display:none");
