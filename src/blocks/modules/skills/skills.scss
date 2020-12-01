@@ -33,15 +33,24 @@
         }
 
         &--2 {
-            align-self: center;
+            margin-left: 27%;
+            align-self: flex-start;
         }
 
         &--3 {
+            margin-right: 27%;
+            align-self: flex-end;
+            padding: 1rem 5%;
+        }
+
+        &--4 {
+            // margin-right: 65%;
             align-self: flex-end;
         }
 
         &-container {
             display: flex;
+            flex-direction: column;
             justify-content: space-around;
             min-height: 30rem;
             padding: 5px;
@@ -533,6 +542,10 @@
 
     &__img {
         width: 10rem;
+
+        &--big {
+            width: 20rem;
+        }
     }
 
     &__name {
@@ -540,6 +553,135 @@
         font-weight: 300;
     }
 }
+
+.qa {
+    margin-top: 10rem;
+
+    &__title {
+        color: $base-color-font;
+        text-align: center;
+        font-size: 4rem;
+        font-weight: 300;
+        text-shadow: 1px 2px 6px rgb(0, 0, 0), 0 0 1em rgb(35, 136, 122);
+    }
+
+    &__header {
+
+        @include respond(phone) {
+            flex-direction: row;
+        }
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        max-width: 1080px;
+        margin: 8rem auto;
+        padding: 5px;
+    }
+
+    &__img {
+
+        @include respond(phone) {
+            display: block;
+        }
+        
+        @include respond(tab-v) {
+            display: block;
+            max-width: 40rem;
+            height: 40rem;
+        }
+        max-width: 27rem;
+        height: 20rem;
+    }
+}
+
+.testing {
+
+    &__title {
+        padding: 5px;
+        font-size: 3rem;
+        font-weight: 300;
+    }
+
+    &__list {
+        padding-left: 1rem;
+        list-style-type: none;
+    }
+
+    &__item {
+        padding: 5px;
+        font-size: 2rem;
+        font-weight: 300;
+    }
+}
+
+.testing-details {
+
+    position: relative;
+    
+    &__container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        max-width: 1080px;
+        margin: 8rem auto;
+    }
+    
+    &__background-img {
+    
+        @include respond(phone) {
+            min-height: 182rem;
+        }
+    
+        @include respond(tab-v) {
+            min-height: 65rem;
+        }
+        position: absolute;
+        z-index: -1;
+        top: 1px;
+        width: 100%;
+        min-height: 292rem;
+        background-image: url("../img/testing-background.jpg");
+        background-size: cover;
+        filter: blur(1px);
+    
+        @media only screen and (min-width: 28.5rem) {
+            min-height: 182rem;
+        }
+    
+        @media only screen and (min-width: 42.15rem) {
+            min-height: 122rem;
+        }
+    }
+    
+    &__gradient-img {
+    
+        @include respond(phone) {
+            min-height: 182.2rem;
+        }
+    
+        @include respond(tab-v) {
+            min-height: 65.2rem;
+        }
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        min-width: 100%;
+        min-height: 292.2rem;
+        background: linear-gradient(-45deg, #e4e9eb, #a1f5e1);
+        background-size: 200% 200%;
+        opacity: 0.85;
+    
+        @media only screen and (min-width: 28.5rem) {
+            min-height: 182.2rem;
+        }
+    
+        @media only screen and (min-width: 42.15rem) {
+            min-height: 122.2rem;
+        }
+    }
+}
+
 
 .devops__container {
     position: relative;
@@ -557,13 +699,13 @@
         text-shadow: 1px 2px 6px rgb(0, 0, 0), 0 0 1em rgb(35, 136, 122);
     }
 
-    &__header {
+    &__header, &__cicd-header {
         max-width: 1080px;
         margin: 8rem auto;
         text-align: center;
     }
 
-    &__img {
+    &__img, &__cicd-img {
 
         @include respond(phone) {
             max-width: 55rem;
@@ -604,6 +746,19 @@
         background-size: 200% 200%;
         opacity: 0.85;
     }
+}
+
+.devops__cicd-header {
+    @include respond(phone) {
+        flex-direction: row;
+    }
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    max-width: 1080px;
+    margin: 8rem auto;
+    padding: 5px;
 }
 
 .devops__top {
@@ -765,6 +920,27 @@
 
     &__item {
         padding: 5px;
+    }
+}
+
+.cicd {
+
+    &__title {
+        padding: 5px;
+        font-size: 3rem;
+        font-weight: 300;
+    }
+
+    &__list {
+        padding-left: 1rem;
+        list-style-type: none;
+    }
+
+    &__item {
+        padding: 5px;
+        font-size: 2rem;
+        font-weight: 300;
+        text-align: left;
     }
 }
 

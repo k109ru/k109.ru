@@ -19,6 +19,7 @@
         @include respond(tab-h) {
             justify-content: space-between;
         }
+        
         display: flex;
         align-items: center;
         justify-content: center;
@@ -207,7 +208,6 @@
     min-height: 20rem;
     overflow: hidden;
     backface-visibility: hidden;
-    background: rgb(255, 255, 255);
     font: 5vw/20vh "Finger Paint", "Open Sans", sans-serif;
     text-align: center;
     color: transparent;

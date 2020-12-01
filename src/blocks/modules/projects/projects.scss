@@ -339,6 +339,15 @@
     position: relative;
     min-height: 60rem;
 
+    &__container--top {
+
+        @include respond(tab-v) {
+            margin-top: 15rem;
+        }
+
+        margin-top: 5rem;
+    }
+
     &__background-img {
 
         @include respond(tab-v) {
@@ -348,13 +357,25 @@
         z-index: -1;
         top: 1px;
         width: 100%;
-        min-height: 160rem;
+        min-height: 165rem;
         background-image: url("../img/2.png");
         background-size: cover;
         filter: blur(1px);
 
         @media only screen and (min-width: 32.1em) {
             min-height: 105rem;
+        }
+
+        &--static {
+            
+            min-height: 65rem;
+
+            @media only screen and (min-width: 32.1em) {
+                min-height: 65rem;
+            }
+            @media only screen and (min-width: 15.1em) {
+                min-height: 65rem;
+            }
         }
     }
 
@@ -363,17 +384,26 @@
         @include respond(tab-v) {
             min-height: 65.2rem;
         }
+
         position: absolute;
         z-index: -1;
         top: 0;
         min-width: 100%;
-        min-height: 160.2rem;
+        min-height: 165.2rem;
         background: linear-gradient(-45deg, rgb(119, 127, 129), rgb(111, 175, 160));
         background-size: 200% 200%;
         opacity: 0.85;
 
         @media only screen and (min-width: 32.1em) {
             min-height: 105rem;
+        }
+
+        &--static {
+            min-height: 65.2rem;
+
+            @media only screen and (min-width: 32.1em) {
+                min-height: 65.2rem;
+            }
         }
     }
 
@@ -395,6 +425,14 @@
     border-radius: 5px;
     box-shadow: -2px 3px 46px -5px rgba(0, 0, 0, 0.75);
 
+    &--top {
+        margin-top: 5rem;
+    }
+
+    &--small {
+        margin-top: 2rem;
+    }
+
     &-title {
         display: block;
         font-size: 2rem;
@@ -403,6 +441,10 @@
         padding: 5px;
         border-bottom: 1px solid rgba(0, 0, 0, 0.15);
         text-align: center;
+
+        &--dark {
+            color: $base-color-font-reverse;
+        }
     }
 
     &-icon-mac {
@@ -438,10 +480,18 @@
         color: $base-color-font;
     }
 
+    &-name {
+        margin: 0;
+        font-size: 2rem;
+        font-weight: 300;
+        color: $base-color-font-reverse;
+    }
+
     &-list {
 
         @include respond(tab-v) {
             padding-bottom: 0;
+            // height: 200rem;
         }
         display: flex;
         flex-wrap: wrap;
@@ -464,7 +514,12 @@
     }
 
     &-item-b {
+        padding-bottom: 4px;
         text-align: center;
+    }
+
+    &-item-c {
+        padding-top: 18px;
     }
 
     &-item-title {
@@ -474,6 +529,10 @@
         padding: 5px;
         text-align: center;
         border-bottom: 1px solid rgba(38, 109, 107, 0.4);
+
+        &--dark {
+            color: $base-color-font-reverse;
+        }
     }
 
     &-img {
@@ -482,6 +541,10 @@
 
     &-img--big {
         width: 14rem;
+    }
+
+    &-img--mid {
+        width: 10rem;
     }
 
     &-img--top {
@@ -527,5 +590,100 @@
     &-text {
         font-size: 1.6rem;
         font-weight: 300;
+    }
+}
+
+.schema {
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+    align-items: center;
+    padding: 1rem;
+
+    &__part {
+        display: flex;
+        height: 17rem;
+    }
+
+    &__item {
+        position: relative;
+        width: 7rem;
+        height: 7rem;
+        border: 1px solid $base-color-font-reverse;
+        border-radius: 50%;
+        box-shadow: -2px 3px 16px -5px rgba(0, 0, 0, 0.75);
+
+        &-circle {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        &-circle--fix {
+            position: absolute;
+            top: 9.5rem;
+            left: 0.6rem;
+        }
+
+        &-img {
+            width: 6rem;
+            height: 6rem;
+        }
+
+        &-img--fix {
+            width: 6rem;
+            height: 6rem;
+            padding-top: 0.8rem;
+        }
+
+        &-title {
+            position: absolute;
+            right: 1rem;
+            bottom: 1rem;
+            font-size: 1.8rem;
+            font-weight: 600;
+        }
+
+        &-list {
+            padding: 1rem;
+            list-style: none;
+            font-size: 1.6rem;
+            font-weight: 400;
+            text-align: center;
+        }
+
+        &-el--fix {
+            width: 18rem;
+        }
+    }
+}
+
+.arrow {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    width: 10rem;
+    margin: 0 1rem;
+    font-size: 2rem;
+
+
+    &__title--fix {
+        position: absolute;
+        top: 0.8rem;
+        left: -6rem;
+    }
+
+    &__view {
+        display: flex;
+        font-size: 3rem;
+
+        &--ver {
+            position: absolute;
+            top: 0.7rem;
+            left: 1.2rem;
+            transform: rotate(90deg);
+        }
     }
 }
